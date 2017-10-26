@@ -5,11 +5,24 @@ class VehiculeManager{
     return $db;
   }
 
+  // request to show all the vehicules
+
   public function getAllVehicules(){
   $response=$this->getDb()->query('SELECT * FROM vehiculeList');
   $vehicules = $response->fetchAll(PDO::FETCH_ASSOC);
   return $vehicules;
 }
+
+// request to add one vehicule
+
+public function addVehicule($input){
+  $response=$this->getDb()->prepare('INSERT INTO vehiculeList(name, type, color) VALUES(:name, :type, :color)');
+  $response->bindValue(':name', $input['name'], PDO::PARAM_STR);
+  $response->bindValue(':type', $input['type'], PDO::PARAM_STR);
+  $response->bindValue(':color', $input['color'], PDO::PARAM_STR);
+  $response->execute();
 }
+
+
 
  ?>

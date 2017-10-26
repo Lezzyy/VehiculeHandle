@@ -3,9 +3,9 @@
  ?>
 <div class="container">
   <form class="" action="" method="post">
-    <input type="text" name="" value="" placeholder="Name">
-    <input type="text" name="" value="" placeholder="Type">
-    <input type="text" name="" value="" placeholder="Color">
+    <input type="text" name="name" value="" placeholder="Name">
+    <input type="text" name="type" value="" placeholder="Type">
+    <input type="text" name="color" value="" placeholder="Color">
     <input type="submit" name="" value="add vehicule">
   </form>
   <hr>
@@ -24,17 +24,18 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
       <?php foreach ($vehicules as $vehicule){
+        echo "<tr>";
         echo "<th>".$vehicule->getId()."</th>";
         echo "<td>".$vehicule->getName()."</td>";
         echo "<td>".$vehicule->getType()."</td>";
         echo "<td>".$vehicule->getColor()."</td>";
+        echo "<input type='hidden' name='' value='."$vehicule->getId()".'>";
         echo "<td><input type='submit' name='' value='See more'><input type='submit' name='' value='Modify'><input type='submit' name='' value='Delete'></td>";
-
+        echo "</tr>";
       } ?>
 
-    </tr>
+
   </tbody>
 </table>
 </div>
