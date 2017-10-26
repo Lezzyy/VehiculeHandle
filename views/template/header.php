@@ -9,6 +9,7 @@
   <body>
     <header class="jumbotron jumbotron-fluid mb-5 mainColor colorWhite">
       <div class="container">
-        <h1 class="display-3">List of vehicule available</h1>
+        <a href="#" class="">HOME</a>
+        <h1 class="text-center">List of vehicule available</h1>
       </div>
     </header>

@@ -96,6 +96,7 @@ textarea {
    ========================================================================== */
 .mainColor {
   background-color: #1b998b;
+  height: 10px;
 }
 
 .colorWhite {
