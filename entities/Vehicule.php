@@ -49,12 +49,12 @@ class Vehicule{
     if(method_exists($this, $method)){
       $this->$method($value);
     }
+  }
+}
 
     public function __construct($vehiculesData){
       $this->hydrate($vehiculesData);
     }
-    }
-  }
 }
 
  ?>

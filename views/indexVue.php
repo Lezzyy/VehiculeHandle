@@ -25,11 +25,15 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><input type="submit" name="" value="See more"><input type="submit" name="" value="Modify"><input type="submit" name="" value="Delete"></td>
+      <?php foreach ($vehicules as $vehicule){
+        echo "<th>".$vehicule->getId()."</th>";
+        echo "<td>".$vehicule->getName()."</td>";
+        echo "<td>".$vehicule->getType()."</td>";
+        echo "<td>".$vehicule->getColor()."</td>";
+        echo "<td><input type='submit' name='' value='See more'><input type='submit' name='' value='Modify'><input type='submit' name='' value='Delete'></td>";
+
+      } ?>
+
     </tr>
   </tbody>
 </table>
