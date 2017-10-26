@@ -107,10 +107,76 @@ footer {
   text-align: center;
 }
 
+/*header*/
+.title a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+
+.title a:hover{
+  color: #041A1F;
+}
+
 /*indexView*/
 .TabList{
   margin-top: 30px;
+  border-radius: 5px;
+  width: 50%;
+  float: none;
 }
+
+.TabList h2{
+  color: #041A1F;
+  margin-bottom: 20px;
+}
+
+.TabList th{
+  text-align: center;
+}
+
+.TabList input{
+  background-color: #1b998b;
+  border-radius: 5px;
+  color: white;
+}
+
+.TabList input:hover{
+  background-color:#041A1F;
+}
+
+.TabList th{
+  color: #1b998b;
+}
+
+#addForm{
+  text-align: center;
+  line-height: 20px;
+}
+
+/*single page*/
+
+#formSinglePage{
+  text-align: center;
+  line-height: 20px;
+}
+
+#formSinglePage input{
+  margin-bottom: 20px;
+}
+
+.modify, .delete{
+  background-color: #1b998b;
+  border-radius: 5px;
+  color: white;
+  height: 30px;
+}
+
+.modify:hover, .delete:hover{
+    background-color:#041A1F;
+}
+
 
 
 /* ##################################################################### */

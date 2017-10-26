@@ -23,6 +23,16 @@ public function addVehicule($input){
   $response->execute();
 }
 
+// request to get one vehicule
+
+public function getSingleVehicule($idVehicule){
+  $response=$this->getDb()->query('SELECT * FROM vehiculeList WHERE id='.$idVehicule);
+  $vehicule=$response->fetchAll(PDO::FETCH_ASSOC);
+  return $vehicule;
+}
 
 
- ?>
+
+}
+
+?>

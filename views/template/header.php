@@ -8,8 +8,10 @@
   </head>
   <body>
     <header class="jumbotron jumbotron-fluid mb-5 mainColor colorWhite">
-      <div class="container">
-        <a href="#" class="">HOME</a>
-        <h1 class="text-center">List of vehicule available</h1>
+      <div class="container title">
+        <div class="row">
+        <a href="../controllers/index.php" class="col-md-1">HOME</a>
+        <h1 class="text-center col-md-11">List of vehicule available</h1>
       </div>
+    </div>
     </header>
