@@ -3,7 +3,7 @@
  ?>
 <div class="container">
   <form class="" action="" method="post">
-    <input type="text" name="" value="" placeholder="Brand">
+    <input type="text" name="" value="" placeholder="Name">
     <input type="text" name="" value="" placeholder="Type">
     <input type="text" name="" value="" placeholder="Color">
     <input type="submit" name="" value="add vehicule">
