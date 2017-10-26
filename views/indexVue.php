@@ -11,7 +11,8 @@
   <hr>
 </div>
 
-<div class="container">
+<div class="container TabList">
+  <h2 class="text-center">Vehicule available</h2>
 <table class="table table-striped table-responsive text-center">
   <thead>
     <tr>
