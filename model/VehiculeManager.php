@@ -1,21 +1,21 @@
 <?php
-class VehiculeManager{
+class VehicleManager{
   public function getDb(){
     $db = new PDO('mysql:host=localhost;dbname=vehiculeHandle;charset=utf8', 'root', 'gj7b!17LA');
     return $db;
   }
 
-  // request to show all the vehicules
+  // request to show all the vehicles
 
-  public function getAllVehicules(){
+  public function getAllVehicles(){
   $response=$this->getDb()->query('SELECT * FROM vehiculeList');
-  $vehicules = $response->fetchAll(PDO::FETCH_ASSOC);
-  return $vehicules;
+  $vehicles = $response->fetchAll(PDO::FETCH_ASSOC);
+  return $vehicles;
 }
 
-// request to add one vehicule
+// request to add one vehicle
 
-public function addVehicule($input){
+public function addVehicle($input){
   $response=$this->getDb()->prepare('INSERT INTO vehiculeList(name, type, color) VALUES(:name, :type, :color)');
   $response->bindValue(':name', $input['name'], PDO::PARAM_STR);
   $response->bindValue(':type', $input['type'], PDO::PARAM_STR);
@@ -23,15 +23,27 @@ public function addVehicule($input){
   $response->execute();
 }
 
-// request to get one vehicule
+// request to get one vehicle
 
-public function getSingleVehicule($idVehicule){
-  $response=$this->getDb()->query('SELECT * FROM vehiculeList WHERE id='.$idVehicule);
-  $vehicule=$response->fetchAll(PDO::FETCH_ASSOC);
-  return $vehicule;
+public function getSingleVehicle($idVehicle){
+  $response=$this->getDb()->query('SELECT * FROM vehiculeList WHERE id='.$idVehicle);
+  $vehicle=$response->fetchAll(PDO::FETCH_ASSOC);
+  return $vehicle;
 }
 
+// request to modify a vehicle
 
+public function updateSingleVehicle($input){
+  $response = $this->getDb()->prepare('UPDATE vehiculeList SET name= :name, type = :type, color = :color WHERE id = :id');
+
+  $response->bindValue(':name', $input['name'], PDO::PARAM_STR);
+  $response->bindValue(':type', $input['type'], PDO::PARAM_STR);
+  $response->bindValue(':color', $input['color'], PDO::PARAM_STR);
+  $response->bindValue(':id', $input['id'], PDO::PARAM_INT);
+
+  $response->execute();
+
+}
 
 }
 

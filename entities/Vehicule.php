@@ -1,6 +1,6 @@
 <?php
 
-class Vehicule{
+class Vehicle{
   protected $id;
   protected $name;
   protected $type;

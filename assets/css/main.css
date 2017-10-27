@@ -136,13 +136,13 @@ footer {
   text-align: center;
 }
 
-.TabList input{
+.btn-custom{
   background-color: #1b998b;
   border-radius: 5px;
   color: white;
 }
 
-.TabList input:hover{
+.btn-custom:hover{
   background-color:#041A1F;
 }
 

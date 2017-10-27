@@ -4,12 +4,8 @@ require('../entities/Vehicule.php');
 
 $vehicleManager = new VehicleManager();
 
-if(isset($_POST) && count($_POST)>0){
-  $newVehicle = new Vehicle($_POST);
-  $vehicleManager->addVehicle($_POST);
-}
-
 $vehicle = $vehicleManager->getSingleVehicle($_GET['id']);
+// $vehicle->updateSingleVehicle($_POST);
 
 
 foreach ($vehicle as $key => $value) {
@@ -17,13 +13,6 @@ foreach ($vehicle as $key => $value) {
 }
 
 
-// foreach ($vehicles as $key => $value) {
-//   $vehicles[$key]= new Vehicle($value);
-// }
+include("../views/modifyView.php");
 
-
-
-
-include"../views/singleView.php";
-
-?>
+ ?>

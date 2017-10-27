@@ -8,13 +8,13 @@
       <input type="text" name="name" value="" placeholder="Name">
       <input type="text" name="type" value="" placeholder="Type">
       <input type="text" name="color" value="" placeholder="Color">
-      <input type="submit" name="" value="Add vehicule">
+      <input type="submit" name="" value="Add vehicle">
     </form>
     <hr>
   </div>
 
   <div class="container TabList">
-    <h2 class="text-center">Vehicule available</h2>
+    <h2 class="text-center">Available vehicles</h2>
   <table class="table table-striped table-responsive text-center">
     <thead>
       <tr>
@@ -26,15 +26,16 @@
       </tr>
     </thead>
     <tbody>
-        <?php foreach ($vehicules as $vehicule){
+      <a href="#"></a>
+        <?php foreach ($vehicles as $vehicle){
           echo "<tr>";
-          echo "<td>".$vehicule->getId()."</td>";
-          echo "<td>".$vehicule->getName()."</td>";
-          echo "<td>".$vehicule->getType()."</td>";
-          echo "<td>".$vehicule->getColor()."</td>";
-          // echo "<form class="" action='' method='post'>"
-          echo "<td><input type='submit' name='seeMore' value='See more'><input type='submit' name='' value='Modify'><input type='submit' name='' value='Delete'></td>";
-          // echo "</form>";
+          echo "<td>".$vehicle->getId()."</td>";
+          echo "<td>".$vehicle->getName()."</td>";
+          echo "<td>".$vehicle->getType()."</td>";
+          echo "<td>".$vehicle->getColor()."</td>";
+          echo "<td><a class='btn btn-custom btn-sm' href='../controllers/single.php?id=".$vehicle->getId()."'>See more</a>
+          <a class='btn btn-custom btn-sm' href='../controllers/modify.php?id=".$vehicle->getId()."'>Modify</a>
+          <a class='btn btn-custom btn-sm' href='../controllers/single.php?id=".$vehicle->getId()."'>Delete</a></td>";
           echo "</tr>";
         } ?>
     </tbody>
