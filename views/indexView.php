@@ -2,7 +2,7 @@
   include("template/header.php");
  ?>
 <main>
-
+<!-- Form to add a vehicle in db and show on this page  -->
   <div class="container" id="addForm">
     <form class="" action="" method="post">
       <input type="text" name="name" value="" placeholder="Name">
@@ -12,6 +12,8 @@
     </form>
     <hr>
   </div>
+
+<!-- Table to show all the vehicle register in db  -->
 
   <div class="container TabList">
     <h2 class="text-center">Available vehicles</h2>
