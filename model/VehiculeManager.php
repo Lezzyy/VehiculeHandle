@@ -33,16 +33,22 @@ public function getSingleVehicle($idVehicle){
 
 // request to modify a vehicle
 
-public function updateSingleVehicle($input){
+public function updateSingleVehicle($input, $get){
   $response = $this->getDb()->prepare('UPDATE vehiculeList SET name= :name, type = :type, color = :color WHERE id = :id');
 
   $response->bindValue(':name', $input['name'], PDO::PARAM_STR);
   $response->bindValue(':type', $input['type'], PDO::PARAM_STR);
   $response->bindValue(':color', $input['color'], PDO::PARAM_STR);
-  $response->bindValue(':id', $input['id'], PDO::PARAM_INT);
+  $response->bindValue(':id', $get['id'], PDO::PARAM_INT);
 
   $response->execute();
 
+}
+
+// request to delete a vehicle
+
+public function deleteVehicle($id){
+$response=$this->getDb()->query('DELETE FROM personnages WHERE id = '.$id);
 }
 
 }

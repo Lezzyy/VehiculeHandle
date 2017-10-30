@@ -5,6 +5,7 @@
 
   <div class="container" id="addForm">
     <form class="" action="" method="post">
+      <!-- <input type="hidden" name="id" value=""> -->
       <input type="text" name="name" value="" placeholder="Name">
       <input type="text" name="type" value="" placeholder="Type">
       <input type="text" name="color" value="" placeholder="Color">
@@ -26,7 +27,6 @@
       </tr>
     </thead>
     <tbody>
-      <a href="#"></a>
         <?php foreach ($vehicles as $vehicle){
           echo "<tr>";
           echo "<td>".$vehicle->getId()."</td>";
@@ -35,7 +35,7 @@
           echo "<td>".$vehicle->getColor()."</td>";
           echo "<td><a class='btn btn-custom btn-sm' href='../controllers/single.php?id=".$vehicle->getId()."'>See more</a>
           <a class='btn btn-custom btn-sm' href='../controllers/modify.php?id=".$vehicle->getId()."'>Modify</a>
-          <a class='btn btn-custom btn-sm' href='../controllers/single.php?id=".$vehicle->getId()."'>Delete</a></td>";
+          <a class='btn btn-custom btn-sm' href='../controllers/delete.php?id=".$vehicle->getId()."'>Delete</a></td>";
           echo "</tr>";
         } ?>
     </tbody>

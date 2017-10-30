@@ -2,24 +2,22 @@
 require('../model/VehiculeManager.php');
 require('../entities/Vehicule.php');
 
+// check the form and if it's ok add a new vehicle in db
 $vehicleManager = new VehicleManager();
-
-if(isset($_POST) && count($_POST)>0){
-  $newVehicle = new Vehicle($_POST);
-  $vehicleManager->addVehicle($_POST);
-}
-
 $vehicle = $vehicleManager->getSingleVehicle($_GET['id']);
-
-
 foreach ($vehicle as $key => $value) {
   $vehicle[$key]= new Vehicle($value);
 }
 
+if(isset($_POST) && count($_POST)>3){
+  $newVehicle = new Vehicle($_POST);
+  $vehicleManager->addVehicle($_POST);
+  // header('Location: index.php');
+}
+var_dump($_POST);
 
-// foreach ($vehicles as $key => $value) {
-//   $vehicles[$key]= new Vehicle($value);
-// }
+
+
 
 
 

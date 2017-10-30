@@ -8,7 +8,6 @@
       <input type="text" name="type" value="" placeholder="Type">
       <input type="text" name="color" value="" placeholder="Color">
       <input type="submit" name="add" value="add vehicule"><br>
-      <!-- echo "<a class='btn btn-custom btn-sm' href='../controllers/modify.php?id=".$vehicle->getId()."'>Modify</a>"; ?> -->
       <input type="submit" name="modify" value="Modify" class="modify">
       <input type="submit" name="delete" value="Delete" class="delete">
     </form>
