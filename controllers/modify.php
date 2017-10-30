@@ -11,6 +11,8 @@ foreach ($vehicle as $key => $value) {
   $vehicle[$key]= new Vehicle($value);
 }
 
+var_dump($_POST['name']);
+
 // if(!empty($_POST)){
 //   $vehicle->updateSingleVehicle($_POST, $_GET);
 // } else {

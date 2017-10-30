@@ -8,8 +8,13 @@
       <input type="text" name="type" value="" placeholder="Type">
       <input type="text" name="color" value="" placeholder="Color">
       <input type="submit" name="add" value="add vehicule"><br>
-      <input type="submit" name="modify" value="Modify" class="modify">
-      <input type="submit" name="delete" value="Delete" class="delete">
+      <!-- <input type="submit" name="modify" value="Modify" class="modify"> -->
+      <?php
+        echo "<a class='btn btn-custom btn-sm' href='../controllers/modify.php?id=".$_GET['id']."'>Modify</a>
+        <a class='btn btn-custom btn-sm' href='../controllers/delete.php?id=".$_GET['id']."'>Delete</a>";
+       ?>
+
+      <!-- <input type="submit" name="delete" value="Delete" class="delete"> -->
     </form>
     <hr>
   </div>
@@ -19,10 +24,11 @@
   <p>
     <?php
     foreach ($vehicle as $dataSingleVehicle) {
-      echo "<p>".$dataSingleVehicle->getName()."</p>";
-      echo "<p>".$dataSingleVehicle->getType()."</p>";
-      echo "<p>".$dataSingleVehicle->getColor()."</p>";
+        echo "<p>".$dataSingleVehicle->getName()."</p>";
+        echo "<p>".$dataSingleVehicle->getType()."</p>";
+        echo "<p>".$dataSingleVehicle->getColor()."</p>";
     }
+
    ?>
   </p>
 </div>

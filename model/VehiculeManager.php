@@ -48,7 +48,7 @@ public function updateSingleVehicle($input, $get){
 // request to delete a vehicle
 
 public function deleteVehicle($id){
-$response=$this->getDb()->query('DELETE FROM personnages WHERE id = '.$id);
+$response=$this->getDb()->query('DELETE FROM vehiculeList WHERE id = '.$id);
 }
 
 }

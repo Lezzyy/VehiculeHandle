@@ -5,7 +5,6 @@
 
   <div class="container" id="addForm">
     <form class="" action="" method="post">
-      <!-- <input type="hidden" name="id" value=""> -->
       <input type="text" name="name" value="" placeholder="Name">
       <input type="text" name="type" value="" placeholder="Type">
       <input type="text" name="color" value="" placeholder="Color">
