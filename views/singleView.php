@@ -19,20 +19,25 @@
   </div>
 
 <!--show the data of the vehicle selected  -->
+<?php
+foreach ($vehicle as $dataSingleVehicle) {
+  ?>
 
-<div class="container">
-  <h3 class="text-center">Vehicule's details</h3>
-  <p>
-    <?php
-    foreach ($vehicle as $dataSingleVehicle) {
-        echo "<p>".$dataSingleVehicle->getName()."</p>";
-        echo "<p>".$dataSingleVehicle->getType()."</p>";
-        echo "<p>".$dataSingleVehicle->getColor()."</p>";
-    }
-
-   ?>
-  </p>
+<div class="card text-center">
+  <div class="card-header">
+    Vehicule's details
+  </div>
+  <div class="card-block">
+    <h4 class="card-title"><?php echo $dataSingleVehicle->getName(); ?></h4>
+    <p class="card-text"><?php echo $dataSingleVehicle->getType(); ?></p>
+    <p class="card-text"><?php echo $dataSingleVehicle->getColor(); ?></p>
+  </div>
+  <div class="card-footer text-muted">
+  </div>
 </div>
+<?php
+}
+?>
 </main>
 
 <?php
