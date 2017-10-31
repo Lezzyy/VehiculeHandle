@@ -192,6 +192,22 @@ line-height: 60px;
   margin-bottom: 10px;
 }
 
+/*modify view*/
+
+#modifyForm input{
+text-align: center;
+width:300px;
+margin: 0 auto;
+float: none;
+}
+
+#modifyForm label{
+  color: #1b998b;
+  font-weight: bold;
+}
+
+
+
 
 /* ##################################################################### */
 /* ##########################   SMARTPHONE   ########################### */

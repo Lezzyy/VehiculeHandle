@@ -8,14 +8,24 @@
 
   foreach ($vehicle as $dataSingleVehicle) {
     echo "<form class='' action='../controllers/modify.php?id=". $_GET['id'] ."' method='post'>";
-    echo "<input type='text' name='name' value='".$dataSingleVehicle->getName()."'>";
-    echo "<input type='text' name='type' value='".$dataSingleVehicle->getType()."'>";
-    echo "<input type='text' name='color' value='".$dataSingleVehicle->getColor()."'>";
-    echo "<input type='hidden' name='id' value='".$dataSingleVehicle->getId()."'>";
-    echo "<input type='submit' name='' value='Modify'>";
+  ?>
+  <div class="form-group" id="modifyForm">
+    <label for="vehicleName">Name</label>
+    <input type="text" name='name' class="form-control" value="<?php echo $dataSingleVehicle->getName() ;?>"><br>
+    <label for="vehicleType">Type</label>
+    <input type="text" name='type' class="form-control" value="<?php echo $dataSingleVehicle->getType() ;?>"><br>
+    <label for="vehicleColor">Color</label>
+    <input type="text" name='color' class="form-control" value="<?php echo $dataSingleVehicle->getColor() ;?>"><br>
+    <input type="hidden" name='id' class="form-control" value="<?php echo $dataSingleVehicle->getId() ;?>"><br>
+    <input type='submit' name='' value='Modify' class="btn btn-custom">
+  </div>
 
-  }
+
+<?php
+ }
  ?>
+
+
 </div>
 </main>
 
