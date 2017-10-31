@@ -18,6 +18,7 @@ foreach ($vehicle as $key => $value) {
 if(isset($_POST) && count($_POST)>0){
 $newVehicle = new Vehicle($_POST);
 $vehicleManager->updateSingleVehicle($newVehicle);
+header('Location: index.php');
 }
 
 include("../views/modifyView.php");

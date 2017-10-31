@@ -1,6 +1,12 @@
-<footer class="jumbotron jumbotron-fluid mt-5 mainColor colorWhite">
+<!-- <footer class="bd-footer jumbotron jumbotron-fluid mt-5 mainColor colorWhite">
   <div class="container">
     <p>Created by LAU</p>
+  </div>
+</footer> -->
+
+<footer class="footer mainColor">
+  <div class="container mainColor">
+    <p class="text-center mainColor colorWhite">CREATED BY LAU</p>
   </div>
 </footer>
 

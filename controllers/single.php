@@ -15,7 +15,6 @@ foreach ($vehicle as $key => $value) {
 if(isset($_POST) && count($_POST)>3){
   $newVehicle = new Vehicle($_POST);
   $vehicleManager->addVehicle($_POST);
-  // header('Location: index.php');
 }
 
 

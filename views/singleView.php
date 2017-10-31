@@ -10,10 +10,6 @@
       <input type="text" name="type" value="" placeholder="Type">
       <input type="text" name="color" value="" placeholder="Color">
       <input type="submit" name="add" value="add vehicule"><br>
-      <?php
-        echo "<a class='btn btn-custom btn-sm' href='../controllers/modify.php?id=".$_GET['id']."'>Modify</a>
-        <a class='btn btn-custom btn-sm' href='../controllers/delete.php?id=".$_GET['id']."'>Delete</a>";
-       ?>
     </form>
     <hr>
   </div>
@@ -31,8 +27,13 @@ foreach ($vehicle as $dataSingleVehicle) {
     <h4 class="card-title"><?php echo $dataSingleVehicle->getName(); ?></h4>
     <p class="card-text"><?php echo $dataSingleVehicle->getType(); ?></p>
     <p class="card-text"><?php echo $dataSingleVehicle->getColor(); ?></p>
+
   </div>
   <div class="card-footer text-muted">
+    <?php
+      echo "<a class='btn btn-custom btn-sm' href='../controllers/modify.php?id=".$_GET['id']."'>Modify</a>
+      <a class='btn btn-custom btn-sm' href='../controllers/delete.php?id=".$_GET['id']."'>Delete</a>";
+     ?>
   </div>
 </div>
 <?php
