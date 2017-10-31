@@ -104,12 +104,16 @@ textarea {
 }
 
 .footer {
-text-align: center;
-position: absolute;
+margin-top: -30px;
+position: fixed;
+left: 0;
 bottom: 0;
 width: 100%;
-height: 60px;
-line-height: 60px;
+background-color: #1b998b;
+height: 40px;
+line-height: 40px;
+color: white;
+text-align: center;
 }
 
 
@@ -146,6 +150,7 @@ line-height: 60px;
   background-color: #1b998b;
   border-radius: 5px;
   color: white;
+  margin-top: 5px;
 }
 
 .btn-custom:hover{
@@ -192,7 +197,17 @@ line-height: 60px;
   margin-bottom: 10px;
 }
 
+.card-header, .card-footer{
+  background-color: #041A1F;
+  color: white;
+}
+
+.card-footer .btn-custom:hover{
+  background-color: white;
+}
+
 /*modify view*/
+
 
 #modifyForm input{
 text-align: center;
@@ -206,6 +221,14 @@ float: none;
   font-weight: bold;
 }
 
+#modifyForm .btn-custom{
+  background-color: #041A1F;
+}
+
+#modifyForm .btn-custom:hover{
+  background-color: #1b998b;
+  color: #041A1F;
+}
 
 
 

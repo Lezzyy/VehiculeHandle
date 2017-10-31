@@ -45,10 +45,6 @@ public function updateSingleVehicle($vehicle){
 
 }
 
-// public function updateSingleVehicle($id){
-//   $reponse = $this->getDb()->prepare("UPDATE vehiculeList SET name=$_POST['name'], type= $_POST['type'], color=$_POST['color'] WHERE id=?");
-//   $response->execute(array($id));
-// }
 
 // request to delete a vehicle
 

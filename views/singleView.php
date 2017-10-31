@@ -21,10 +21,10 @@ foreach ($vehicle as $dataSingleVehicle) {
 
 <div class="card text-center">
   <div class="card-header">
-    Vehicule's details
+  <h2>  Vehicule's details</h2>
   </div>
   <div class="card-block">
-    <h4 class="card-title"><?php echo $dataSingleVehicle->getName(); ?></h4>
+    <h3 class="card-title"><?php echo $dataSingleVehicle->getName(); ?></h4>
     <p class="card-text"><?php echo $dataSingleVehicle->getType(); ?></p>
     <p class="card-text"><?php echo $dataSingleVehicle->getColor(); ?></p>
 
