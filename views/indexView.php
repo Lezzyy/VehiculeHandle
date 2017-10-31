@@ -8,7 +8,7 @@
       <input type="text" name="name" value="" placeholder="Name">
       <input type="text" name="type" value="" placeholder="Type">
       <input type="text" name="color" value="" placeholder="Color">
-      <input type="submit" name="" value="Add vehicle">
+      <input type="submit" name="" class="btn btn-custom" value="Add vehicle">
     </form>
     <hr>
   </div>
